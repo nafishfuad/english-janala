@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="bg-[#F5F2F2] sticky top-0 border-b-2 border-[#D9D7D7]">
+        <!-- nav bar -->
+        <nav class="Hero flex justify-between items-center w-10/12 mx-auto py-5">
+            <div class="logo">
+                <p class="flex items-center gap-1 text-xl font-medium"><span class="font-semibold">English</span><img src="assets/logo.png" alt="" srcset=""> জানালা</p>
+            </div>
+            <div class="buttons flex gap-4">
+                <div class="btn py-2 px-4 border-1 border-[#422AD5] text-[#422AD5]">
+                    <img class="w-3" src="assets/fa-circle-question.png">
+                    <p class="text-sm font-semibold ">FAQ</p>
+                </div>
+                <div class="btn py-2 px-4 border-1 border-[#422AD5] text-[#422AD5]">
+                    <img class="w-3" src="assets/fa-book-open.png">
+                    <p class="text-sm font-semibold">Learn</p>
+                </div>
+                <div class="btn py-2 px-4 border-1 border-[#422AD5] text-[#422AD5]">
+                    <img class="w-3" src="assets/fa-arrow-right-from-bracket.png">
+                    <p class="text-sm font-semibold">Logout</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Login Section -->
+
+    <section class="h-[85vh] border-b-3 border-[#FFEBEB]">
+      <div class="Hero w-10/12 mx-auto flex justify-between py-4">
+        <!-- login left part -->
+        <div class="Login w-1/2 flex flex-col items-start justify-center gap-5">
+          <h1 class="text-5xl font-bold">
+            <span class="text-[#00BCFF]">English</span> is Easy!!
+          </h1>
+          <p class="text-2xl font-medium mt-[-20px]">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+          <div class="w-full inputs flex flex-col gap-2">
+            <input
+              class="px-3 py-2 rounded-md border-gray-300 w-2/5"
+              type="text"
+              placeholder="Enter Your Name"
+            />
+            <input
+              class="px-3 py-2 rounded-md border-gray-300 w-2/5"
+              type="text"
+              placeholder="Enter Login Code(123456)"
+            />
+          </div>
+          <button
+            class="text-sm font-semibold py-3 px-4 rounded-sm border-1 shadow-gray-500 shadow-[0px_3px_4px_0px]  text-[#422AD5] hover:text-white hover:bg-[#422AD5] hover:border-[#422AD5]"
+            type="button"
+          >
+            Get Started
+          </button>
+        </div>
+        <!-- login right part -->
+        <div class="image w-1/2 flex justify-end">
+          <img class="" src="assets/hero-student.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section>
+      <footer class="w-10/12 mx-auto flex justify-between py-24">
+        <!-- footer left -->
+        <div class="details flex flex-col gap-2">
+            <p class="flex items-center gap-1 text-xl font-medium mb-4"><span class="font-semibold">English</span><img src="assets/logo.png" alt="" srcset=""> জানালা</p>
+            <h3 class="text-xl font-semibold">ইংরেজি শিখুন সহজে</h3>
+            <p class="text-base font-normal">Providing ED-Tech Applications since 2025</p>
+        </div>
+        <!-- footer right -->
+        <div class="socials flex flex-col justify-end">
+            <p class="text-sm font-semibold text-[#18181B60] mb-4">Follow us</p>
+            <div class="icons flex gap-4">
+                <img class="w-7 object-contain" src="assets/fb-thumb.png">
+                <img class="w-7 object-contain" src="assets/youtube-thumb.png">
+                <img class="w-7 object-contain" src="assets/instagram-thumb.png">
+                <img class="w-7 object-contain" src="assets/github-thumb.png">
+            </div>
+        </div>
+      </footer>
+    </section>
+    <!-- Scripts -->
+    <script src="scripts/loginValidate.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
