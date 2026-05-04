@@ -28,9 +28,9 @@ loginBtn.addEventListener('click', () =>{
     if (name) {
         if (convertedPin === 123456) {
         loginState(true);
-    } else {
+        } else {
         alert('PIN wrong')
-    }
+        }
     } else {
         alert('Enter your first name')
     }
