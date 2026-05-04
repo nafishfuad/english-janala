@@ -12,9 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <header class="bg-[#F5F2F2] sticky top-0 border-b-2 border-[#D9D7D7]">
+    <header id="nav-bar" class="bg-[#F5F2F2] sticky top-0 border-b-2 border-[#D9D7D7] hidden">
       <!-- nav bar -->
-      <nav class="Hero flex justify-between items-center w-10/12 mx-auto py-5">
+      <nav class="Hero flex justify-between items-center w-11/12 mx-auto py-5">
         <div class="logo">
           <p class="flex items-center gap-1 text-xl font-medium">
             <span class="font-semibold">English</span
@@ -30,7 +30,7 @@
             <img class="w-3" src="assets/fa-book-open.png" />
             <p class="text-sm font-semibold">Learn</p>
           </div>
-          <div class="btn py-2 px-4 border-1 border-[#422AD5] text-[#422AD5]">
+          <div id="logout-btn" class="btn py-2 px-4 border-1 border-[#422AD5] text-[#422AD5]">
             <img class="w-3" src="assets/fa-arrow-right-from-bracket.png" />
             <p class="text-sm font-semibold">Logout</p>
           </div>
@@ -39,8 +39,8 @@
     </header>
     <!-- Login Section -->
 
-    <section class="h-[85vh] border-b-3 border-[#FFEBEB] hidden">
-      <div class="Hero w-10/12 mx-auto flex justify-between py-4">
+    <section id="hero-section" class="h-[85vh]">
+      <div class="w-11/12 mx-auto flex justify-between py-4">
         <!-- login left part -->
         <div class="Login w-1/2 flex flex-col items-start justify-center gap-5">
           <h1 class="text-5xl font-bold">
@@ -52,19 +52,19 @@
             অন্য একটি Level এ
           </p>
           <div class="w-full inputs flex flex-col gap-2">
-            <input
+            <input id="login-name"
               class="px-3 py-2 rounded-md border-gray-300 w-2/5"
               type="text"
               placeholder="Enter Your Name"
             />
-            <input
+            <input id="pin-code"
               class="px-3 py-2 rounded-md border-gray-300 w-2/5"
               type="text"
               placeholder="Enter Login Code(123456)"
             />
           </div>
-          <button
-            class="text-sm font-semibold py-3 px-4 rounded-sm border-1 shadow-gray-500 shadow-[0px_3px_4px_0px] text-[#422AD5] hover:text-white hover:bg-[#422AD5] hover:border-[#422AD5]"
+          <button id="login-btn"
+            class="btn text-sm font-semibold py-3 px-4 rounded-sm border-1 shadow-gray-500 shadow-[0px_3px_4px_0px] text-[#422AD5] hover:text-white hover:bg-[#422AD5] hover:border-[#422AD5]"
             type="button"
           >
             Get Started
@@ -77,52 +77,173 @@
       </div>
     </section>
 
-    <!-- vocabularies section -->
-    <section class="py-12">
-      <div class="w-10/12 mx-auto">
-        <h2 class="text-4xl font-bold text-center"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
-        <div class="lesson-btn flex justify-center items-center gap-4 mt-8">
+    <!-- lesson section -->
+    <section id="lesson-section" class="py-16 hidden">
+      <div class="w-11/12 mx-auto">
+        <h2 class="text-4xl font-bold text-center">
+          <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h2>
+        <!-- vocabularies btn -->
+        <div class="lesson-btn flex justify-center items-center gap-5 mt-8">
           <div
-            class="flex gap-2 py-2 px-4 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
+            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
           >
-            <img class="w-4 object-cover" src="assets/fa-book-open.png" />
+            <img class="w-4 object-contain" src="assets/fa-book-open.png" />
             <h2 class="text-sm font-semibold">Lesson -1</h2>
           </div>
           <div
-            class="flex gap-2 py-2 px-4 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
+            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
           >
-            <img class="w-4 object-fill" src="assets/fa-book-open.png" />
-            <h2 class="text-sm font-semibold">Lesson -1</h2>
+            <img class="w-4 object-contain" src="assets/fa-book-open.png" />
+            <h2 class="text-sm font-semibold">Lesson -2</h2>
           </div>
           <div
-            class="flex gap-2 py-2 px-4 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
+            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
           >
-            <img class="w-4 object-fill" src="assets/fa-book-open.png" />
-            <h2 class="text-sm font-semibold">Lesson -1</h2>
+            <img class="w-4 object-contain" src="assets/fa-book-open.png" />
+            <h2 class="text-sm font-semibold">Lesson -3</h2>
           </div>
           <div
-            class="flex gap-2 py-2 px-4 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
+            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
           >
-            <img class="w-4 object-fill" src="assets/fa-book-open.png" />
-            <h2 class="text-sm font-semibold">Lesson -1</h2>
+            <img class="w-4 object-contain" src="assets/fa-book-open.png" />
+            <h2 class="text-sm font-semibold">Lesson -4</h2>
           </div>
           <div
-            class="flex gap-2 py-2 px-4 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
+            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5]"
           >
-            <img class="w-4 object-fill" src="assets/fa-book-open.png" />
-            <h2 class="text-sm font-semibold">Lesson -1</h2>
+            <img class="w-4 object-contain" src="assets/fa-book-open.png" />
+            <h2 class="text-sm font-semibold">Lesson -6</h2>
+          </div>
+          <div
+            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+          >
+            <img class="w-4 object-contain" src="assets/fa-book-open.png" />
+            <h2 class="text-sm font-semibold">Lesson -7</h2>
           </div>
         </div>
-        <div class="lesson-contianer flex flex-col items-center justify-center bg-[#F8F8F8] rounded-lg py-16 mt-8">
-          <p class="text-sm font-normal text-[#79716B] mb-3">আপনি এখনো কোন Lesson Select করেন</p>
+        <div
+          class="lesson-contianer flex flex-col items-center justify-center bg-[#F8F8F8] rounded-lg py-8 mt-8"
+        >
+          <div class="py-14">
+            <p class="text-sm font-normal text-[#79716B] mb-3">
+            আপনি এখনো কোন Lesson Select করেন
+          </p>
           <h3 class="font-medium text-3xl">একটি Lesson Select করুন।</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="py-14 mt-12 hidden">
+      <div class="coontainer w-11/12 mx-auto">
+        <h2 class="text-4xl font-bold text-center">
+          <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h2>
+        <div class="faq py-14 flex flex-col gap-5">
+          <div
+            class="collapse collapse-plus bg-[#F9FAFB]"
+          >
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">
+              1. What is the difference between var, let, and const?
+            </div>
+            <div class="collapse-content text-sm">
+              var, let, and const are JavaScript keywords for variable
+              declaration, differing mainly in scope, reassignment, and
+              hoisting: var is function/global-scoped,
+              re-declareable/reassignable; let is block-scoped, reassignable but
+              not re-declareable; const is block-scoped, reassignable only if
+              the property of an object (not the variable itself) and not
+              re-declareable, requiring initialization. Modern JavaScript favors
+              let for mutable variables and const for constants, avoiding var
+              due to its less predictable scope.
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus bg-[#F9FAFB]"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              2. What is the difference between map(), forEach(), and filter()?
+            </div>
+            <div class="collapse-content text-sm">
+              . map() is used when you want to transform each element of an
+              array. It runs a function on every item and returns a new array
+              with the modified values, without changing the original array. .
+              forEach() is used to perform an action on each element of an
+              array, such as logging values or updating the UI. It does not
+              return anything, so it is mainly used for side effects rather than
+              data transformation. . filter() is used when you want to select
+              specific elements from an array based on a condition. It checks
+              each element and returns a new array containing only the elements
+              that pass the condition.
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus bg-[#F9FAFB]"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              4. How do JavaScript Promises work??
+            </div>
+            <div class="collapse-content text-sm">
+              JavaScript Promises are used to handle asynchronous operations. A
+              Promise represents a value that may be available now, in the
+              future, or never. A Promise has three states: pending (initial
+              state), fulfilled (operation completed successfully), and rejected
+              (operation failed). When a Promise is fulfilled, it returns a
+              result; when rejected, it returns an error. You handle these
+              results using .then() for success and .catch() for errors, which
+              helps write cleaner and more readable asynchronous code compared
+              to traditional callbacks.
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus bg-[#F9FAFB]"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              5. How does closure work in JavaScript
+            </div>
+            <div class="collapse-content text-sm">
+              A closure in JavaScript happens when a function remembers and can
+              access variables from its outer (lexical) scope, even after the
+              outer function has finished executing. This works because
+              functions in JavaScript keep a reference to the scope in which
+              they were created. As a result, inner functions can continue to
+              use outer variables, which is commonly used for data
+              encapsulation, maintaining state, and creating private variables.
+            </div>
+          </div>
+          <div
+            class="collapse collapse-plus bg-[#F9FAFB]"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              3. What are arrow functionsy and now are they different from
+              regular functions?
+            </div>
+            <div class="collapse-content text-sm">
+              Arrow functions are a shorter syntax for writing functions in
+              JavaScript. They are commonly used for cleaner and more readable
+              code. They are different from regular functions in a few important
+              ways. Arrow functions do not have their own this keyword; instead,
+              they inherit this from the surrounding scope. This makes them
+              especially useful in callbacks. They also do not have their own
+              arguments object and cannot be used as constructors with the new
+              keyword. Regular functions, on the other hand, have their own
+              this, support arguments, and can be used as constructors.
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer Section -->
-    <section>
-      <footer class="w-10/12 mx-auto flex justify-between py-24">
+    <section class=" border-t-3 border-[#FFEBEB]">
+      <footer class="w-11/12 mx-auto flex justify-between py-24">
         <!-- footer left -->
         <div class="details flex flex-col gap-2">
           <p class="flex items-center gap-1 text-xl font-medium mb-4">
@@ -147,6 +268,7 @@
       </footer>
     </section>
     <!-- Scripts -->
+     <script src="Utilities/utilities.js"></script>
     <script src="scripts/loginValidate.js"></script>
     <script src="scripts/main.js"></script>
   </body>
