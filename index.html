@@ -10,11 +10,21 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .active {
+        background-color: #422ad5;
+        color: white;
+      }
+      html{
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+    </style>
   </head>
   <body>
     <header
       id="nav-bar"
-      class="bg-[#F5F2F2] sticky top-0 border-b-2 border-[#D9D7D7]"
+      class="bg-[#F5F2F2] z-10 sticky top-0 border-b-2 border-[#D9D7D7]"
     >
       <!-- nav bar -->
       <nav class="Hero flex justify-between items-center w-11/12 mx-auto py-5">
@@ -99,191 +109,32 @@
         <!-- vocabularies btn -->
         <div
           id="lesson-btns"
-          class="lesson-btn flex justify-center items-center gap-5 mt-8"
+          class="lesson-btns flex justify-center items-center gap-5 mt-8"
         ></div>
         <div
-          class="lesson-contianer flex flex-col items-center justify-center bg-[#F8F8F8] rounded-lg py-8 mt-8"
+          id="lesson-container-main"
+          class="lesson-container flex flex-col items-center justify-center bg-[#F8F8F8] rounded-lg py-8 mt-8"
         >
-          <!-- <div class="w-full py-8">
+        <!-- loader -->
+        <section id="loader" class="text-center py-10 hidden">
+        <span class="loading loading-dots loading-xl"></span>
+        
+        </section>
+        <!-- end loader -->
+        <div id="lesson-container" class="min-w-full">
+          <div class="w-full py-8">
             <div class="flex flex-col items-center">
               <p class="text-sm font-normal text-[#79716B] mb-3">
                 আপনি এখনো কোন Lesson Select করেন
               </p>
               <h3 class="font-medium text-3xl">একটি Lesson Select করুন।</h3>
             </div>
-          </div> -->
-          <div class="lesson-card-container grid grid-cols-4 gap-5 w-full px-5 py-4">
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200 hover:shadow-sm hover:border-gray-300">
-                  <img class="w-5 object-contain brightness-0" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200 hover:shadow-sm hover:border-gray-300">
-                  <img class="w-5 object-contain brightness-0" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg py-8 px-12">
-              <h2 class="text-3xl font-bold">Eager</h2>
-              <p class="text-lg font-normal text-gray-500 mt-1">Meaning / pronunciation</p>
-              <p class="text-xl font-medium mt-2">আগ্রহী / ইগার</p>
-              <div class="lesson-card-icons flex justify-between w-full mt-8">
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-                <div class="px-4 py-3 rounded-md bg-[#1A91FF15] border-1 border-gray-200">
-                  <img class="w-5 object-contain" src="assets/fa-circle-question.png">
-                </div>
-              </div>
-            </div>
-            
           </div>
+        </div>
+          
+          <!-- <div id="cards-container" class="lesson-card-container grid grid-cols-4 gap-5 w-full px-5 py-4">
+            
+          </div> -->
         </div>
       </div>
     </section>
@@ -410,6 +261,22 @@
         </div>
       </footer>
     </section>
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="card_details" class="modal">
+      <div class="modal-box">
+        <div id="modal-details" class="border-1 border-[#EDF7FF] p-6 rounded-lg">
+          
+        </div>
+        <div class="modal-action flex justify-start">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn text-2xl font-medium bg-[#422AD5] text-white py-2">Complete Learning</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <!-- Scripts -->
     <script src="Utilities/utilities.js"></script>
     <script src="scripts/loginValidate.js"></script>
