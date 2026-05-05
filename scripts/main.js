@@ -1,4 +1,3 @@
-// lesson btn fetch
 
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
@@ -51,44 +50,6 @@ const loadLessonByLevel = (id) => {
 };
 
 
-// [
-//     {
-//         "id": 101,
-//         "level_no": 1,
-//         "lessonName": "Basic Vocabulary"
-//     },
-//     {
-//         "id": 102,
-//         "level_no": 2,
-//         "lessonName": "Everyday Words"
-//     },
-//     {
-//         "id": 103,
-//         "level_no": 3,
-//         "lessonName": "Intermediate Vocabulary"
-//     },
-//     {
-//         "id": 104,
-//         "level_no": 4,
-//         "lessonName": "Advanced Vocabulary"
-//     },
-//     {
-//         "id": 105,
-//         "level_no": 5,
-//         "lessonName": "Complex Words"
-//     },
-//     {
-//         "id": 106,
-//         "level_no": 6,
-//         "lessonName": "Mastering Vocabulary"
-//     },
-//     {
-//         "id": 107,
-//         "level_no": 7,
-//         "lessonName": "Mastering Vocabulary"
-//     }
-// ]
-
 const displayLessonBtn = (objects) => {
   const lessonBtnDiv = document.getElementById("lesson-btns");
   for (const object of objects) {
@@ -104,7 +65,6 @@ const displayLessonBtn = (objects) => {
     lessonBtnDiv.append(btnDiv);
   }
 };
-// document.getElementById
 
 const displayLessonCards = (cards) => {
 
@@ -153,4 +113,4 @@ const displayLessonCards = (cards) => {
 };
 
 getBtnData();
-// addActiveClass();
+
