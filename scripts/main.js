@@ -49,7 +49,7 @@ const displayLessonBtn=(objects)=>{
         let btnDiv = document.createElement('div');
         btnDiv.innerHTML = `
             <div id="object.id"
-            class="flex gap-2 py-3 px-5 border-2 border-[#422AD5] rounded-md text-[#422AD5] hover:bg-[#422AD5] hover:text-white hover:[&>img]:brightness-0 hover:[&>img]:invert"
+            class="flex gap-2 py-3 px-5 border-1 border-[#422AD5] rounded-md text-[#422AD5] hover:bg-[#422AD5] hover:text-white hover:[&>img]:brightness-0 hover:[&>img]:invert"
           >
             <img class="w-4 object-contain" src="assets/fa-book-open.png" />
             <h2 class="text-sm font-semibold">Lesson -${object.level_no}</h2>
